@@ -2,3 +2,10 @@
 .idea/
 .DS_Store
 *.iml
+
+.metals/
+.bloop/
+.vscode/
+.classpath
+.project
+.settings/
