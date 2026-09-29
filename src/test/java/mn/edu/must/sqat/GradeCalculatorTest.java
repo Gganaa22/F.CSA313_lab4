@@ -109,4 +109,14 @@ class GradeCalculatorTest {
         // Act + Assert
         assertThrows(IllegalArgumentException.class, () -> calc.totalScore(att, lab, q1, q2, exam));
     }
+
+
+    @Test
+    @DisplayName("NaN оролтод IllegalArgumentException шидэх ёстой")
+    void nanInputThrows() {
+        GradeCalculator calc = new GradeCalculator();          // Arrange
+        // Act + Assert
+        assertThrows(IllegalArgumentException.class, () -> calc.letterGrade(Double.NaN));
+        assertThrows(IllegalArgumentException.class, () -> calc.totalScore(Double.NaN, 40, 10, 10, 30));
+}
 }
